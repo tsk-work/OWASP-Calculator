@@ -141,25 +141,25 @@ function calculate(){
   $(".IS").text(IS + " " + FIS);
 
   score = '(';
-  score = score + 'SL:' + $("#sl").val() + '/';
-  score = score + 'M:' + $("#m").val() + '/';
-  score = score + 'O:' + $("#o").val() + '/';
-  score = score + 'S:' + $("#s").val() + '/';
-  score = score + 'ED:' + $("#ed").val() + '/';
-  score = score + 'EE:' + $("#ee").val() + '/';
-  score = score + 'A:' + $("#a").val() + '/';
-  score = score + 'ID:' + $("#id").val() + '/';
-  score = score + 'LC:' + $("#lc").val() + '/';
-  score = score + 'LI:' + $("#li").val() + '/';
-  score = score + 'LAV:' + $("#lav").val() + '/';
-  score = score + 'LAC:' + $("#lac").val() + '/';
-  score = score + 'FD:' + $("#fd").val() + '/';
-  score = score + 'RD:' + $("#rd").val() + '/';
-  score = score + 'NC:' + $("#nc").val() + '/';
-  score = score + 'PV:' + $("#pv").val();
+  score = score + 'SL:' + encodeURIComponent($("#sl").val()) + '/';
+  score = score + 'M:' + encodeURIComponent($("#m").val()) + '/';
+  score = score + 'O:' + encodeURIComponent($("#o").val()) + '/';
+  score = score + 'S:' + encodeURIComponent($("#s").val()) + '/';
+  score = score + 'ED:' + encodeURIComponent($("#ed").val()) + '/';
+  score = score + 'EE:' + encodeURIComponent($("#ee").val()) + '/';
+  score = score + 'A:' + encodeURIComponent($("#a").val()) + '/';
+  score = score + 'ID:' + encodeURIComponent($("#id").val()) + '/';
+  score = score + 'LC:' + encodeURIComponent($("#lc").val()) + '/';
+  score = score + 'LI:' + encodeURIComponent($("#li").val()) + '/';
+  score = score + 'LAV:' + encodeURIComponent($("#lav").val()) + '/';
+  score = score + 'LAC:' + encodeURIComponent($("#lac").val()) + '/';
+  score = score + 'FD:' + encodeURIComponent($("#fd").val()) + '/';
+  score = score + 'RD:' + encodeURIComponent($("#rd").val()) + '/';
+  score = score + 'NC:' + encodeURIComponent($("#nc").val()) + '/';
+  score = score + 'PV:' + encodeURIComponent($("#pv").val());
   score = score + ')';
   $('#score').text(score);
-  $("#score").attr("href", "https://javierolmedo.github.io/OWASP-Calculator/?vector=" + score);
+  $("#score").attr("href", "https://javierolmedo.github.io/OWASP-Calculator/?vector=" + encodeURIComponent(score));
 
   if(getRisk(LS) == "LOW"){
       $(".LS").addClass("classNote");
